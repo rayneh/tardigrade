@@ -26,7 +26,12 @@ contract Tardigrade_v2 is CCIPReceiver {
 	bool public is_sepolia;
 
 	// The current Tardigrade
-	string public ipfs_link;
+	string public tardigrade;
+	string[] public all_ipfs_links;
+
+	// For register ai nodes
+	address[] public registered_nodes;
+	address[] public accepted_nodes;
 
 	// For pseudeo random number
 	uint256 private nonce;
@@ -123,6 +128,48 @@ contract Tardigrade_v2 is CCIPReceiver {
 
 		IRouterClient(router).ccipSend(destinationChainSelector, message);
 		is_real = false;
+	}
+
+	/*********************************
+	 ******* Ai Node Handling ********
+	 ********************************/
+
+	/**
+	 * Registers a new node address.
+	 *
+	 * This function allows the registration of a new node address to the list of registered nodes.
+	 *
+	 * @param nodeAddress The address of the node to be registered.
+	 */
+	function registerNode(address nodeAddress) public {
+		registered_nodes.push(nodeAddress);
+	}
+
+	/**
+	 * @dev Sets the IPFS link for the tradigrade.
+	 *
+	 * This function can only be called by accepted nodes of the tradigrade. The IPFS link is used to store the evolution of the tradigrade.
+	 *
+	 * @param newIpfsLink The new IPFS link to be set for the tradigrade.
+	 *
+	 * @notice This function can only be called by accepted nodes of the tradigrade. The IPFS link is updated with the new IPFS link provided.
+	 * The new IPFS link is also added to the list of all IPFS links for the tradigrade.
+	 */
+	function setIpfsLink(string memory newIpfsLink) public {
+		require(
+			is_real,
+			"Only for the real tradigrade can be new evolution set"
+		);
+		bool isAcceptedNode = false;
+		for (uint i = 0; i < accepted_nodes.length; i++) {
+			if (accepted_nodes[i] == msg.sender) {
+				isAcceptedNode = true;
+				break;
+			}
+		}
+		require(isAcceptedNode, "Only accepted nodes can call this function");
+		tardigrade = newIpfsLink;
+		all_ipfs_links.push(newIpfsLink);
 	}
 
 	/*********************************
