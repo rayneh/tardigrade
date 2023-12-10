@@ -48,3 +48,5 @@ npx hardhat scripts/06-sendSepoliaFuji.ts --network sepolia
 ```
 
 By combining nostalgic elements from classic games with cutting-edge blockchain technologies, the Dynamic NFT Evolution project aims to provide users with a truly unique and evolving NFT experience.
+
+
