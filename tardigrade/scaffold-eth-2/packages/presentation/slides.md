@@ -13,26 +13,28 @@ Resilent multchain dynamic NFT
 </div>
 ---
 ---
-### Tardigrade (Dynamic NFT Evolution Project)
-- 🚀 Innovative exploration
-- 🔄️ Cross-chain trading for evolution
-- 💡 OpenAI SDK
 
-### Inspiration 
-- 🎮 Classic video games notstalgia
-- 🔎 Pokemon-like evolution concept
-- 🌱 Dynamic and adaptive NFTs
+## Why
 
-### Technologies
+- 😭 NFT's doesn't survive a cross chain Transfer
+
+## Solution
+- 🦾 Tardigrade, the most resilent NFT
+- 🌱 Tardigrades don't die, they evolve via cross chain
+- 🖱️Tardigrade choose their Evolver
+
+## Technologies
 - ⚙️ OpenAI SDK + Chainlink CCIP
 - ⚒️ Hardhat for deployment & verification
 - 🖼️Frontend React
+
+`Inpspriation: video games, pokemon, cryptoi ktties, ...`
 ---
 
 # Demo
 
 [Live](https://tardigrade.surge.sh)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=oDVCtI6tJ6ySs1S7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 layout: intro-image-right
