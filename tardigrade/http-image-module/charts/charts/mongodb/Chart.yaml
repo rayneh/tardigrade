@@ -1,0 +1,5 @@
+# mongodb/Chart.yaml
+apiVersion: v2
+name: mongodb
+description: MongoDB Helm chart
+version: 0.1.0

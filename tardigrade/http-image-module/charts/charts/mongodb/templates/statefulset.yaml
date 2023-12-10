@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "mongodb.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "mongodb.name" . }}
+    helm.sh/chart: {{ include "mongodb.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+spec:
+  serviceName: {{ include "mongodb.fullname" . }}
+  replicas: {{ .Values.mongodb.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "mongodb.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "mongodb.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      initContainers:
+        - name: init-mongodb
+          image: "{{ .Values.mongodb.image.repository }}:{{ .Values.mongodb.image.tag | default .Chart.AppVersion }}"
+          command: ["bash", "-c", "mkdir -p /bitnami/mongodb/data && chown -R 1001:1001 /bitnami/mongodb/data"]
+          securityContext:
+            runAsUser: 0
+            runAsGroup: 0
+          volumeMounts:
+            - name: data
+              mountPath: /bitnami/mongodb
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.mongodb.image.repository }}:{{ .Values.mongodb.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.mongodb.image.pullPolicy | default "Always" }}
+          ports:
+            - name: mongodb
+              containerPort: 27017
+              protocol: TCP
+          volumeMounts:
+            - name: data
+              mountPath: /bitnami/mongodb
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        storageClassName: {{ .Values.mongodb.persistence.storageClass }}
+        resources:
+          requests:
+            storage: {{ .Values.mongodb.persistence.size | default "1Gi" }}

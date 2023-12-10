@@ -1,0 +1,23 @@
+---
+stages:
+  - "docker"
+
+variables:
+  CI_REGISTRY: "registry.gitlab.com"
+  CI_PWD: "/builds/raynn"
+  DOCKER_IMAGE_LATEST: "${CI_REGISTRY}/${CI_REGISTRY_USER}/${CI_PROJECT_NAME}:latest"
+
+docker-build-release-image-job:
+  stage: "docker"
+  image:
+    name: "docker:latest"
+  allow_failure: true
+  before_script:
+    - "export DOCKER_HOST=unix:///var/run/docker.sock"
+    - "dockerd &"
+  script:
+    - echo ${GITLAB_TOKEN}
+    - echo "{$GITLAB_TOKEN}" | docker login -u "$CI_REGISTRY_USER" --password-stdin "$CI_REGISTRY"
+    - "docker build -t $CI_REGISTRY/$CI_REGISTRY_USER/$CI_PROJECT_NAME ."
+    - "docker push $CI_REGISTRY/$CI_REGISTRY_USER/$CI_PROJECT_NAME"
+...

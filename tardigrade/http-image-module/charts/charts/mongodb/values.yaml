@@ -1,0 +1,21 @@
+# mongodb/values.yaml
+mongodb:
+  enabled: true
+  extraFlags:
+    - "--setParameter=authenticationMechanisms=SCRAM-SHA-1"
+  image:
+    repository: bitnami/mongodb
+    tag: 4.4.6-debian-10-r12
+    pullPolicy: Always
+  auth:
+    enabled: true
+    rootPassword: rootpassword
+    username: user
+    password: password
+  service:
+    enabled: true
+    port: 27017
+  persistence:
+    enabled: true
+    storageClass: standard-rwo
+    size: 1Gi
