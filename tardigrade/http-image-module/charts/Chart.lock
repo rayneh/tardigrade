@@ -1,0 +1,9 @@
+dependencies:
+- name: mongodb
+  repository: ""
+  version: 0.1.0
+- name: http-image-module
+  repository: ""
+  version: 0.1.0
+digest: sha256:f9a131073081c26ce2c96d4336ecc60cd8f430bdca1fecc2ac2de6aa0068c6c7
+generated: "2023-11-16T23:23:35.2117067+01:00"

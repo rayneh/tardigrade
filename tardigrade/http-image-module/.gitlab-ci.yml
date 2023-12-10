@@ -1,0 +1,25 @@
+---
+include:
+  - project: "constellation-hackathon-2023/tooling/common-config"
+    ref: "main"
+    file: "gitlab/technologies/helm.yaml"
+
+stages:
+  - ".pre"
+  - "lint"
+  - "http-server"
+  - "release"
+  - "deploy"
+
+deploy-http-server-job:
+  extends: ".helm-deploy"
+  stage: "http-server"
+  variables:
+    HELM_RELEASE_NAME: "http-server"
+    HELM_CHART_LOCAL_PATH: "charts/"
+    NAMESPACE: "http-server"
+  rules:
+    - if: "$CI_PIPELINE_SOURCE == \"web\""
+      when: "manual"
+
+...

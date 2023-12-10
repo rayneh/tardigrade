@@ -1,0 +1,12 @@
+# my-umbrella-chart/Chart.yaml
+
+apiVersion: v2
+name: http-server
+description: A Helm chart for deploying MongoDB and HTTP Image Module
+version: 0.1.0
+dependencies:
+  - name: mongodb
+    version: 0.1.0
+  - name: http-image-module
+    version: 0.1.0
+
