@@ -1,5 +1,17 @@
 # Software Design
 
+:::warning
+
+This is deprecated. We figured out that 3 chains would need kind of an Manager on every chain to handle this smoothly. 
+Even if we just circle the NFT around. Maybe there is a simple solution.  
+We don't know yet. We came to the conclusion, we would have to etablish CCIP Manager Script. 
+
+Let us know. 
+
+f.e. write an email to `frank_dierolf@web.de`
+
+::: 
+
 ## Idea
 
 `Tardigrade.com`

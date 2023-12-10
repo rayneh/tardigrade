@@ -136,7 +136,7 @@ CLOCK: [2023-11-30 Thu 16:50]--[2023-11-30 Thu 16:56] =>  0:06
   - [X] add fuji function to call cross contract(restart, depcrated)
 * [#A] Restart
 :LOGBOOK:
-CLOCK: [2023-12-09 Sat 17:17]
+CLOCK: [2023-12-09 Sat 17:17]--[2023-12-09 Sat 17:57] =>  0:40
 CLOCK: [2023-12-09 Sat 13:21]--[2023-12-09 Sat 14:13] =>  0:52
 CLOCK: [2023-12-08 Fri 23:24]--[2023-12-09 Sat 00:24] =>  1:00
 CLOCK: [2023-12-08 Fri 22:24]--[2023-12-08 Fri 23:17] =>  0:53
@@ -169,4 +169,58 @@ CLOCK: [2023-12-08 Fri 14:17]--[2023-12-08 Fri 14:51] =>  0:34
 - [X] add docs via new plugin
 - [X] food
 - [X] add verify script
-- [ ] ok rethink again.
+* [#A] Improve Tardi
+:LOGBOOK:
+CLOCK: [2023-12-09 Sat 21:43]--[2023-12-09 Sat 23:07] =>  1:24
+CLOCK: [2023-12-09 Sat 20:05]--[2023-12-09 Sat 21:21] =>  1:16
+CLOCK: [2023-12-09 Sat 18:08]--[2023-12-09 Sat 20:04] =>  1:56
+:END:
+- [X] generate via git log
+  - [X] Added a comment for Link Address of deployed Chain
+  - [X] Added a comment for Router Address of CCIP Router of deployed Chain
+  - [X] Added a comment for current owner of Tardigrade
+  - [X] Added a comment for identifier to check if it's the real Tardigrade
+  - [X] Added string array for ai powered Tardi generation
+  - [X] Added current Tardigrade IPFS link
+  - [X] Added private nonce for pseudo random number
+  - [X] Modified constructor function with additional parameters
+  - [X] Initialized new theme arrays for Tardi generation
+  - [X] Added is_sepolia and is_fuji boolean variables
+  - [X] Modified _ccipReceive function to handle additional prompt_string data
+  - [X] Modified send function to generate prompt strings and increase tardi_level
+  - [X] Created generateRandomNumber function
+  - [X] Added UTILS section with description
+- [X] make 2 turns
+- [X] generate via git log
+  - [X] Addition of link and router addresses
+  - [X] Initialization of tardi_level
+  - [X] Initialization of owner and is_real
+  - [X] Addition of theme_sepolia and theme_fuji arrays
+  - [X] Initialization of is_sepolia and is_fuji
+  - [X] Initialization of ipfs_link
+  - [X] Addition of nonce variable
+  - [X] Addition of generateRandomNumber function
+  - [X] Update of _ccipReceive function to include prompt_string
+  - [X] Update of send function to include prompt_string and handle is_fuji and is_sepolia cases
+  - [X] Addition of UTILS section
+  - [X] Update of changeOwner function to include _owner parameter
+  - [X] Update of main function to deploy tardigrade_v2 with is_sepolia=true and is_fuji=false
+  - [X] Update of main function to deploy tardigrade_v2 with is_sepolia=false and is_fuji=true
+  - [X] Update of main function to fund tardigrade with link on fuji network
+  - [X] Update of main function to send tardigrade from fuji to sepolia network
+  - [X] Update of main function to fund tardigrade with link on sepolia network
+  - [X] Update of main function to send tardigrade from sepolia to fuji network
+- [X] generate via git log
+  - [X] Removed the `tardigrade` string variable and `all_ipfs_links` array variable.
+  - [X] Removed the `registered_nodes` and `accepted_nodes` arrays.
+  - [X] Added a new `ipfs_link` variable of type string.
+  - [X] Removed the functions `registerNode` and `setIpfsLink` that were used to register and set IPFS links for the Tardigrade.
+  - [X] Updated the code comment to reflect the removal of the functions and variables related to AI node handling.
+  - [X] The focus of the contract seems to have shifted from handling AI nodes and IPFS links to other functionalities.
+- [X] generate via the git log
+  - [X] Updated the title of the presentation to "resilient multchain dynamic NFT"
+  - [X] Added an image of the Tardigrade logo to the second slide
+  - [X] Introduced the problem statement regarding NFTs not surviving cross chain
+  - [X] Proposed the solution of giving NFTs some resilience
+  - [X] Added a diagram illustrating the flow of the solution using UML notation
+  - Updated the team member section to include their roles and skills

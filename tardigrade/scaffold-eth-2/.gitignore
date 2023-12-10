@@ -2,7 +2,7 @@ node_modules
 
 # dependencies, yarn, etc
 # yarn / eslint
-.yarn/patches
+.yarn/*
 yarn.lock
 .yarn-error.log
 packages/docs/.vitepress/cache/*

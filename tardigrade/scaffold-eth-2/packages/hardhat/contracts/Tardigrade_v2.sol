@@ -36,6 +36,14 @@ contract Tardigrade_v2 is CCIPReceiver {
 	// For pseudeo random number
 	uint256 private nonce;
 
+	// Event fired when Tardigrade is received
+	event TardigradeReceived(
+		uint256 tardiLevel,
+		address owner,
+		bool isReal,
+		string[] promptString
+	);
+
 	/**
 	 * @dev Constructor function for the contract.
 	 * @param _is_real A boolean value indicating whether the contract is real or not.
@@ -93,6 +101,7 @@ contract Tardigrade_v2 is CCIPReceiver {
 			message.data,
 			(uint256, address, bool, string[])
 		);
+		emit TardigradeReceived(tardi_level, owner, is_real, prompt_string);
 	}
 
 	/**
