@@ -155,6 +155,20 @@ contract Tardigrade_v2 is CCIPReceiver {
 	}
 
 	/**
+	 * @dev Accepts a registered node.
+	 *
+	 * This function is used to accept a registered node in the system. Only the owner of the contract can call this function.
+	 * The node must be a real tardigrade in order to be accepted.
+	 *
+	 * @param registeredNode The address of the registered node to be accepted.
+	 */
+	function acceptNode(address registeredNode) external {
+		require(owner == msg.sender, "You are not the owner");
+		require(is_real, "This is not the real tardigrade");
+		accepted_nodes.push(registeredNode);
+	}
+
+	/**
 	 * @dev Sets the IPFS link for the tradigrade.
 	 *
 	 * This function can only be called by accepted nodes of the tradigrade. The IPFS link is used to store the evolution of the tradigrade.
