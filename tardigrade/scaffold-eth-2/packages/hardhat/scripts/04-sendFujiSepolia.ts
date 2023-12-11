@@ -6,8 +6,8 @@ async function main() {
     return 1;
   }
 
-  const tardigrade_v2Fuji = `0x2933B6608A4821c9E93B90Cbeaa5d19378994725`;
-  const tardigrade_v2Sepolia = `0x40765d48939D2e88eD75e235A4Df4e57f228c0f0`;
+  const tardigrade_v2Fuji = `0x4618F10d03d37abc23c3dbdADCb3d58053762c34`;
+  const tardigrade_v2Sepolia = `0x68e412e68673b2AFFd5c2b6D7769EeDa5c666B3C`;
   const destinationChainSelector = 16015286601757825753n;
   const [signer] = await ethers.getSigners();
 
