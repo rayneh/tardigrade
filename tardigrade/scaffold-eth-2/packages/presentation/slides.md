@@ -38,6 +38,69 @@ Resilent multchain dynamic NFT
 
 ---
 layout: intro-image-right
+image: 'https://i.ibb.co/c8Lp1Sj/carbon-7.png'
+---
+
+### How ?
+
+```plantuml
+@startuml
+!theme plain
+
+actor User
+entity WebApp
+database SmartContractFuji
+database SmartContractSepolia
+entity Node
+
+group "Setup"
+User -> SmartContractSepolia: "mint"
+User -> SmartContractFuji: "mint"
+Node -> SmartContractSepolia: "register"
+Node -> SmartContractFuji: "register"
+User -> SmartContractSepolia: "acceptNode"
+User -> SmartContractFuji: "acceptNode"
+Node -> SmartContractSepolia: "listens"
+Node -> SmartContractFuji: "listens"
+end
+
+group "Automised via Cronjob for MVP Purpose"
+group "Send Sepoloa"
+User -> SmartContractFuji: "sendToSepolia"
+SmartContractFuji -> SmartContractSepolia: "recieves"
+SmartContractSepolia -> SmartContractSepolia: "update data, emit event"
+Node <- SmartContractSepolia: "pulls data"
+Node -> Node: "generate image, push ipfs"
+Node -> SmartContractSepolia: "sets tardigrade"
+end
+
+group "Send Fuji"
+User -> SmartContractSepolia: "sendToFuji"
+SmartContractSepolia -> SmartContractFuji: "recieves"
+SmartContractFuji -> SmartContractFuji: "update data, emit event"
+Node <- SmartContractFuji: "pulls data"
+Node -> Node: "generate image, push ipfs"
+Node -> SmartContractFuji: "sets tardigrade"
+end
+
+group "repeat.."
+end
+
+group "repeat..."
+end
+end
+
+group 
+WebApp -> SmartContractSepolia: "fetches alls images"
+WebApp -> WebApp: "display images"
+User -> WebApp: "Watch all images"
+end
+
+@enduml
+```
+
+---
+layout: intro-image-right
 image: 'https://gitlab.com/constellation-hackathon-2023/frontend/scaffold-eth-2/-/raw/main/packages/docs/public/taris-logo.png'
 ---
 ### Maximilian Stahl

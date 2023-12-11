@@ -8,21 +8,15 @@
     .
     <a href="https://tardigrade.surge.sh">Live</a>
     ·
-    <a href="">Youtube</a>
+    <a href="https://youtu.be/LUEmOLQZ-l8">Youtube</a>
     ·
     <a href="https://gitlab.com/constellation-hackathon-2023/frontend/scaffold-eth-2">Code</a>
   </p>
 </div>
 
-### Screenshot
-
-w.i.p
-
 ### Summary
 
-Read the [Idea](https://tardigrade.surge.sh/Notes/Software-Design.html).
-
-... w.i.p ...
+Read the [Idea](http://presentation.tardigrade.surge.sh)
 
 #### Repo Structure
 
@@ -30,12 +24,23 @@ Read the [Idea](https://tardigrade.surge.sh/Notes/Software-Design.html).
 
 `./packages/docs/` contains the documentation\
 `./packages/presentation/` contains the presentation\
-`./packages/nextjs` contains Frontend Application\
-`./packages/hardhat` contains SmartContracts
+`./packages/react` contains Frontend Application\
+`./packages/hardhat` contains SmartContracts\
+`./packages/tardiAiNode` contains rough node setup, main in openai-module.
 
 ### Quickstart
 
-w.i.p.
+```bash
+cd ./packages/hardhat
+npx hardhat scripts/01-deploySepolia.ts --network sepolia
+npx hardhat scripts/011-verifySepolia.ts
+npx hardhat scripts/02-deployFuji.ts --network fuji
+npx hardhat scripts/021-verifyFuji.ts --network fuji
+npx hardhat scripts/03-fundFujiWithLink --network fuji
+npx hardhat scripts/04-sendFujiSepolia --network fuji
+npx hardhat scripts/05-fundSepoliaWithLink --network sepolia
+npx hardhat scripts/06-sendSepoliaFuji.ts --network sepolia
+```
 
 ### Team
 
