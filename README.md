@@ -51,7 +51,7 @@ a unique and evolving experience for users.
 
 ### Constellation Submission
 - [Presentation](presentation.tardigrade.surge.sh)
-- [Video](''VIDEO HERE')
+- [Video](https://youtu.be/LUEmOLQZ-l8)
 - [DevPost](https://devpost.com/software/tardigrade)
 
 ### Docs
