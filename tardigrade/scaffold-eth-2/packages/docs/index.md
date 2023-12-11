@@ -5,7 +5,6 @@ layout: home
 hero:
   name: "Tardigrade"
   text: "Dynamic cross chain NFT"
-  tagline: My great project tagline
   image:
     src: /taris-logo.png
     alt: Taris-logo
@@ -15,14 +14,24 @@ hero:
       link: /Intro/Overview
     - theme: alt
       text: Code
-      link: https://gitlab.com/constellation-hackathon-2023/frontend/scaffold-eth-2/
+      link: http://code.tardigrade.surge.sh
+    - theme: alt
+      text: Presenation
+      link: http://presenation.tardigrade.surge.sh
+    - theme: alt
+      text: Video
+      link: https://www.youtube.com/watch?v=LUEmOLQZ-l8
+    - theme: alt
+      text: Video
+      link: http://tardigrade.surge.sh
+
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: ⚔️ CCIP
+    details: Cross Chain Communication
+  - title: 🖱️ Node Choosing
+    details: Choose your nodes which should evolve your nft. 
+  - title: 🔖 Readable
+    details: Well communicated thruh documentation on many fronts. 
 ---
-
+  

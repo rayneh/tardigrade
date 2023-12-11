@@ -24,6 +24,7 @@ export default defineConfig({
       {
         text: 'Notes',
         items: [
+          { text: 'Software Design 2', link: '/Notes/Software-Design-2' },
           { text: 'Software Design', link: '/Notes/Software-Design' },
         ]
       }
