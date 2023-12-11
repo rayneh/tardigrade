@@ -6,7 +6,7 @@ async function main() {
     return 1;
   }
   const [signer] = await ethers.getSigners();
-  const tardigradeFujiContractAddress = "0x2933B6608A4821c9E93B90Cbeaa5d19378994725";
+  const tardigradeFujiContractAddress = "0x4618F10d03d37abc23c3dbdADCb3d58053762c34";
   const fujiLinkAddress = "0x0b9d5D9136855f6FEc3c0993feE6E9CE8a297846";
   const linkAmount = ethers.utils.parseUnits("1", 18);
 
