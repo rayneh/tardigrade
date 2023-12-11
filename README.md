@@ -217,21 +217,6 @@ fully implement this aspect due to the increased intricacies it introduced.
 
 3. **Automating Contract Address Adjustments:** The addresses in certain scripts need manual adjustments, presenting a challenge in automating this process without introducing potential points of failure.
 
-## Current Workflow
-
-To interact with the project, users can follow the provided workflow:
-
-```bash
-npx hardhat scripts/01-deploySepolia.ts --network sepolia
-npx hardhat scripts/011-verifySepolia.ts
-npx hardhat scripts/02-deployFuji.ts --network fuji
-npx hardhat scripts/021-verifyFuji.ts --network fuji
-npx hardhat scripts/03-fundFujiWithLink --network fuji
-npx hardhat scripts/04-sendFujiSepolia --network fuji
-npx hardhat scripts/05-fundSepoliaWithLink --network sepolia
-npx hardhat scripts/06-sendSepoliaFuji.ts --network sepolia
-```
-
 By combining nostalgic elements from classic games with cutting-edge blockchain technologies, Tardigrade (Dynamic NFT 
 Evolution project) aims to provide users with a truly unique and evolving NFT experience.
 
