@@ -50,12 +50,12 @@ a unique and evolving experience for users.
 ## Useful Links
 
 ### Constellation Submission
-- [Presentation](presentation.tardigrade.surge.sh)
+- [Presentation](https://presentation.tardigrade.surge.sh)
 - [Video](https://youtu.be/LUEmOLQZ-l8)
 - [DevPost](https://devpost.com/software/tardigrade)
 
 ### Docs
-- [Documentation](docs.tardigrade.surge.sh)
+- [Documentation](https://docs.tardigrade.surge.sh)
 - [Software Design](https://hackmd.io/@uv8lNHtfS3Kc0nK3GAWRnw/ByHk_aQIa)
 
 ### Contracts
@@ -74,7 +74,7 @@ a unique and evolving experience for users.
 
 Slide show of a full run of ten cross-chain transactions 
 
-- [Evolutions after 10 ccip swaps slide show](tardigrade.surge.sh)
+- [Evolutions after 10 ccip swaps slide show](https://tardigrade.surge.sh)
 
 ### Promps
 
