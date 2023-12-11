@@ -22,7 +22,7 @@ hero:
       text: Video
       link: https://www.youtube.com/watch?v=LUEmOLQZ-l8
     - theme: alt
-      text: Video
+      text: Demo
       link: http://tardigrade.surge.sh
 
 
